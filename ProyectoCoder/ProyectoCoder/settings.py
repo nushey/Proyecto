@@ -55,7 +55,9 @@ ROOT_URLCONF = 'ProyectoCoder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/zebal/Desktop/PythonProyecto1/ProyectoCoder/ProyectoCoder/templates/"],
+        'DIRS': [
+            f"{BASE_DIR}/PythonProyecto1/ProyectoCoder/ProyectoCoder/templates"
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

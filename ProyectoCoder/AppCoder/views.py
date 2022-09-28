@@ -5,5 +5,10 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from AppCoder.models import Estudiante
+
 def mostrar_inicio(request):
-    return render(request, "AppCoder/inicio.html")
+
+    estudiante = Estudiante(nombre="Ezequiel", apellido="Figueroa", email="a@coder.com")
+    contexto = {"estudiante_1": estudiante}
+    return render(request, "AppCoder/inicio.html", contexto)
