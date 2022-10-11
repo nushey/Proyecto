@@ -1,0 +1,14 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+    
+    <h1 class="titulos_secciones">Formulario de Entregas</h1>
+    <form id="Formulario_Entregables" method="POST">{% csrf_token %}
+        <table>
+            {{ mi_formulario.as_table }}
+        </table>
+        <input type="submit" value="Agregar entrega" class="botones">
+    </form> 
+
+{% endblock %}

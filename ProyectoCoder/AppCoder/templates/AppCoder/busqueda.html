@@ -1,0 +1,13 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+<h1 class="titulos_secciones">Formulario de Busqueda - Cursos</h1>
+<form action="/AppCoder/buscar/" method="get" id="Formulario_Busqueda">
+    <label for="camada" style="font-weight:bold">Ingrese número de camada a buscar</label>
+    <input type="number" name="camada" id="camada" placeholder="Ingrese numero camada">
+    <input type="submit" value="Buscar" class="botones">
+</form>
+
+{% endblock %}
+
+

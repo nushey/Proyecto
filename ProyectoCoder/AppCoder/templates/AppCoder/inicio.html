@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    {% load static %}
+
     <meta charset="UTF-8">
+    <link rel="icon" href="{% static "img/icon.ico" %}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static "styles.css" %}">
+    <title>Pre-Entrega / Python</title>
 </head>
-<body style="background-color: aquamarine;">
-    Hola!! El estudiante es: {{estudiante_1.nombre}} {{estudiante_1.apellido}}
+<body>
+    <div id="container">
+        <div class="navbar">
+            <img class="logo" src="{% static "img/nav.png" %}" alt="">
+            <ul>
+                <li class="accesos"><a href="{% url "inicio" %}" class="links">Inicio</a></li>
+                <li class="accesos"><a href="{% url "estudiantes" %}" class="links">Estudiantes</a></li>
+                <li class="accesos"><a href="{% url "profesores" %}" class="links">Profesores</a></li>
+                <li class="accesos"><a href="{% url "cursos" %}" class="links">Cursos</a></li>
+                <li class="accesos"><a href="{% url "entregable" %}" class="links">Entregable</a></li>
+                <li class="accesos"><a href="{% url "busqueda" %}" class="links">Busqueda</a></li>
+            </ul>
+        </div>
+    </div>
+    <header id="head">
+        <section>
+            {% if pag == 1 %}
+            <h1 class="titulo">Proyecto Django - Python</h1>
+            {% elif pag == 2 %}
+            <h1 class="titulo">Estudiantes</h1>
+            {% elif pag == 3 %}
+            <h1 class="titulo">Profesores</h1>
+            {% elif pag == 4 %}
+            <h1 class="titulo">Cursos</h1>
+            {% elif pag == 5 %}
+            <h1 class="titulo">Entregables</h1>
+            {% elif pag == 6 %}
+            <h1 class="titulo">Buscador</h1>
+            {% endif %} 
+        </section>
+        
+    </header>
 </body>
 </html>
+{% block Contenido %}
+    
+{% endblock %}
+
+

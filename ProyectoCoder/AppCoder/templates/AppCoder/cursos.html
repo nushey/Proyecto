@@ -1,0 +1,13 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+    <h1 class="titulos_secciones">Formulario de Cursos</h1>
+    <form id="Formulario_Cursos" method="POST">{% csrf_token %}
+        <table>
+            {{ mi_formulario.as_table }}
+        </table>
+        <input type="submit" value="Agregar curso" class="botones">
+    </form> 
+
+{% endblock %}

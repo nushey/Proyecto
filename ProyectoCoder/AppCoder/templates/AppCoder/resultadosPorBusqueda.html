@@ -1,0 +1,24 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+
+<div class="cont_busqueda">
+    {% if cursos %}
+    <p><b>Se encontró la camada nro: {{camada}}</b></p>
+        <ul style="margin-top: 5px;">
+        {% for curso in cursos %}
+            <li>Nombre: {{curso.nombre}}</li>
+            <li>Camada: {{curso.camada}} </li>
+        {% endfor %}
+        </ul>
+
+    {% else  %}
+    <p><b>No hay datos sobre esta camada</b></p>
+    {% endif %}
+    <p>{{respuesta}}</p>
+    <h2 id="link_volver"><a class="links" href="{% url "busqueda" %}">Volver</a></h2>
+</div>
+
+
+{% endblock %}
