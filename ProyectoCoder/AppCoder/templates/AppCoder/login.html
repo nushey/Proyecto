@@ -1,0 +1,23 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+    <div class="login_page">
+        <h1 class="login-h1">BIENVENIDO ESTUDIANTE/PROFES@R</h1>
+        {% if mensaje == undefined %}
+        <form action="" method="POST" id="form_login">
+            {% csrf_token %}
+        
+            {{form.as_p}}
+        
+            <button type="submit" id="btn-login">Iniciar Sesión</button>
+        </form>
+        {% endif %}
+        {% if mensaje %}
+        <a href="{% url "Login" %}" id="logear_nuevamente">Probar nuevamente</a>
+        <h4>{{mensaje}}</h4>
+        {% endif %}
+    </div>
+
+{% endblock %}
+

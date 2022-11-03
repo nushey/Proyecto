@@ -1,0 +1,33 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+<section>
+    <article class="secciones">
+        <div class="titulo_secciones">
+            <h1>Cursos</h1>
+        </div>
+        <h3 class="subtitulo_secciones">Lista de Cursos</h3>
+        <div class="lista_secciones">
+            <ul>
+                {% for curso in object_list %} 
+                    <li>
+                        <p class="texto_lista" >Curso: {{ curso.nombre }}</p>
+                        <p> 
+                            <a class="ver_editar_borrar" href="{% url "DetalleCursos" curso.id %}">Ver</a>
+                            <a class="ver_editar_borrar" href="{% url "EditarCursos" curso.id %}">Editar</a>
+                            <a class="ver_editar_borrar" href="{% url "BorrarCursos" curso.id %}">Borrar</a>
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a class="regresar" href="{% url "Cursos" %}">Regresar</a>
+    </article>
+</section>
+
+{% endblock %}
+  
+    
+
+    

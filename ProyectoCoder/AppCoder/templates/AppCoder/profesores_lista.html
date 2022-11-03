@@ -1,0 +1,29 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+<section>
+    <article class="secciones">
+        <div class="titulo_secciones">
+            <h1>Profesores</h1>
+        </div>
+        <h3 class="subtitulo_secciones">Lista de Profesores</h3>
+        <div class="lista_secciones">
+            <ul>
+                {% for profesor in object_list %} 
+                    <li>
+                        <p class="texto_lista" >Profesor: {{ profesor.nombre }}</p>
+                        <p> 
+                            <a class="ver_editar_borrar" href="{% url "DetalleProfesores" profesor.id %}">Ver</a>
+                            <a class="ver_editar_borrar" href="{% url "EditarProfesores" profesor.id %}">Editar</a>
+                            <a class="ver_editar_borrar" href="{% url "BorrarProfesores" profesor.id %}">Borrar</a>
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a class="regresar" href="{% url "Profesores" %}">Regresar</a>
+    </article>
+</section>
+
+{% endblock %}

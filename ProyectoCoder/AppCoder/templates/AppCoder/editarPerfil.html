@@ -1,0 +1,21 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+    <div class="login_page">
+        <h1 class="login-h1">Editar Perfil: {{user}}</h1>
+        <form action="" method="POST" id="form-register">
+            {% csrf_token %}
+        
+           
+
+                {{ form.as_p }}
+    
+           
+        
+                <button type="submit" id="btn-register">Enviar</button>
+        </form>
+    </div>
+
+{% endblock %}
+

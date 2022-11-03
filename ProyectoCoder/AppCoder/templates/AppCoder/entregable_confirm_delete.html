@@ -1,0 +1,18 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+<section>
+    <article class="secciones">
+        <div class="titulo_secciones">
+            <h1>Entregable</h1>
+        </div>
+        <h3 class="subtitulo_secciones">Borrar Entregable</h3>
+        <form method="post">{% csrf_token %}
+            <p class="texto_lista">¿Estas seguro que deseas borrar el entregable "{{ object }}"?</p><br>
+         <input id="editar" type="submit" value="Borrar"/>
+         <a class="regresar" href="{% url "ListaEntregables" %}">Cancelar</a>
+        </form>
+    </article>
+    
+{% endblock %}

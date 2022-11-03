@@ -1,0 +1,19 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+<section>
+    <article class="secciones">
+        <div class="titulo_secciones">
+            <h1>Profesores</h1>
+        </div>
+        <h3 class="subtitulo_secciones">Profesor:</h3>
+        <form method="POST">{% csrf_token %} 
+            {{ form.as_p }} <br>
+            <input id="editar" type="submit" value="Enviar"/>
+            <a class="regresar" href="javascript:history.back(-1);">Regresar</a>
+        </form>
+    </article>
+
+   
+    {% endblock %}

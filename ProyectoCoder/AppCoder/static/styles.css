@@ -1,0 +1,338 @@
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Encabezado*/
+header {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background-color:white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  margin-right: 50px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+}
+
+.logo img{
+  height: 45px;
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+/*Links*/
+.links {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 10px;
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nombre_usuario{
+  font-size: 15px;
+  color: rgb(36, 0, 77);
+}
+
+.cuenta {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 3px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: right;
+  
+}
+
+.links::before{
+  content: "";
+  height: 3px;
+  width: 0%;
+  background-color: rgb(7, 81, 15);
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s ease-out;
+}
+
+.links:hover::before {
+  width: 100%;
+  
+}
+
+/*Portada*/
+#head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6),rgba(0, 0, 0, 0.4)), url(img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  
+}
+
+.titulo {
+  display:inline-block;
+  font-size: 80px;
+  color: rgb(229, 235, 233);
+  text-shadow: 3px 1px black;
+}
+
+.subtitulo {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 1px black;
+}
+
+/*Portadas de las distintas secciones*/
+.secciones {
+  height: 100vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6),rgba(0, 0, 0, 0.4)), url(img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+/*Titulos de las distintas secciones*/
+.titulo_secciones {
+  margin-top: 45px;
+  border-bottom: solid 2px white;
+  display:inline-block;
+  font-size: 80px;
+  color: white;
+  text-shadow: 1px 1px black;
+  
+}
+/*Subtitulos de las distintas secciones*/
+.subtitulo_secciones{
+  display: block;
+  margin-top: 25px;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: rgb(52, 42, 42);
+  
+}
+
+.lista_secciones {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.agregar_listar {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+
+.lista_secciones ul li {
+  margin-bottom: 10px;
+}
+
+.texto_lista {
+  font-size: 25px;
+  color: white;
+}
+.ver_editar_borrar {
+  text-decoration: none;
+  color: rgb(0, 49, 155);
+  font-size: 20px;
+}
+
+.regresar{
+  text-decoration: none;
+  background-color: rgb(16, 43, 251);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 20px;
+  color: white;
+}
+
+input#editar{
+  text-decoration: none;
+  background-color: rgb(16, 43, 251);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 20px;
+  color: white;
+  width: 126.72px;
+  height: 32px;
+  border:0 none;
+}
+
+
+
+
+
+/*Articulos de cada sección*/
+
+
+
+.boton {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(10, 3, 105);
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+label[for="camada"] {
+  display: inline-block;
+  width: 400px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="number"], input[type="email"],select{
+  width: 310px;
+  height: 23px;
+  font-weight: bold;
+}
+
+input[type="file"]{
+  width: 400px;
+  height: 23px;
+  font-weight: bold;
+}
+
+#id_user{
+  width: 400px;
+  height: 23px;
+  font-weight: bold;
+}
+
+#id_entregado{
+  width: 320px;
+  height: 24px;
+  
+}
+
+input[type="submit"]{
+  width: 70px;
+  height: 25px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+
+/*Login/Register*/
+
+.login_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(0, 0, 0, 0.6)), url(img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.login-h1{
+  color: rgb(14, 3, 112);
+  font-size: 50px;
+  margin: 50px;
+  padding: 15px;
+  border-bottom: 2px solid black;
+}
+
+#id_password{
+  width: 250px;
+  height: 25px;
+}
+
+#id_username{
+  width: 250px;
+  height: 25px;
+}
+
+#btn-login {
+  color: white;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(28, 107, 192);
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: 0;
+
+}
+
+#btn-register {
+  color: white;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(28, 107, 192);
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: 0;
+
+}
+
+#form-register label{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  width: 250px;
+  text-align: right;
+}
+
+#form-register input{
+  width: 400px;
+  height: 25px;
+}
+
+#logear_nuevamente {
+  text-decoration: none;
+  background-color: rgb(28, 107, 192);
+  color: white;
+  width: 200px;
+  height: 25px;
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  border: 0;
+}
+
+.errorlist li {
+  text-decoration: none;
+  font-size: 15px;
+  text-align: left;
+  color: white;
+}

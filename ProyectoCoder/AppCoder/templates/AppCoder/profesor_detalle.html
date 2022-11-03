@@ -1,0 +1,25 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+<section>
+    <article class="secciones">
+        <div class="titulo_secciones">
+            <h1>Profesores</h1>
+        </div>
+        <h3 class="subtitulo_secciones">Detalle</h3>
+        <div class="lista_secciones">
+            <ul>
+                <li><p class="texto_lista">Nombre: {{ profesor.nombre }}</p></li>
+                <li><p class="texto_lista">Apellido: {{ profesor.apellido }}</p></li>
+                <li><p class="texto_lista">Email: {{ profesor.email }}</p></li>
+                <li><p class="texto_lista">Profesion: {{ profesor.profesion }}</p></li>
+            </ul>
+        </div>
+        <a class="regresar" href="{% url "ListaProfesores" %}">Regresar</a>
+    </article>
+        
+        
+  
+    
+    {% endblock %}

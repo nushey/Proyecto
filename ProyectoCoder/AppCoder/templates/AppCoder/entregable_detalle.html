@@ -1,0 +1,28 @@
+{% extends "AppCoder/inicio.html" %}
+{% load static %}
+{% block Contenido %}
+
+<section>
+    <article class="secciones">
+        <div class="titulo_secciones">
+            <h1>Entregable</h1>
+        </div>
+        <h3 class="subtitulo_secciones">Detalle</h3>
+        <div class="lista_secciones">
+            <ul>
+                <li><p class="texto_lista">Nombre: {{ entregable.nombre }}</p></li>
+                <li><p class="texto_lista">Fecha: {{ entregable.fecha }}</p></li>
+                <li><p class="texto_lista">Entregado: {% if entregable.entregado == True %}
+                    Ha sido entregado
+                    {% else %}
+                    No ha sido entregado
+                    {% endif %}</p></li>
+            </ul>
+        </div>
+        <a class="regresar" href="{% url "ListaEntregables" %}">Regresar</a>
+    </article>
+        
+        
+  
+    
+    {% endblock %}
